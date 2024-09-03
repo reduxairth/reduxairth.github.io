@@ -273,7 +273,7 @@
         var rdm_keyword = document.getElementById('rdm_keyword');
         console.log(shuffle_keyword);
         shuffle_keyword.forEach(function (keyworda) {
-            var keyword_url = url + "search?q=" + keyworda;
+            var keyword_url = url + "?search=" + keyworda;
             rdm_keyword.innerHTML += `<div class="col-sm-12 col-md-6 col-lg-4 col-xl-3 overflow-hidden" style="height: 25px;">
                     <a
                         href="${keyword_url}">${keyworda}</a>
