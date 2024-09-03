@@ -27,11 +27,11 @@
         const protocol = window.location.protocol;
         var baseUrl = protocol + "//" + host;
 
-        var ambila = currentUrl.replace("?search=", "");
+        var ambila = currentUrl.replace("search?q=", "");
         var ambils = ambila.replace("&c=1", "");
         var ambil = decodeURI(ambils)
         var ambil = ambil.replaceAll("+", " ");
-        var ambil = ambil.replace("search?q=", "?search=");
+        var ambil = ambil.replace("?search=", "");
         var ambil = ambil.replace("?q=", "");
         var postTitle = ambil;
 
