@@ -21,18 +21,15 @@
         $(document).ready(function () { $(&#39;img#closed &#39;).click(function () { $(&#39; #btm_banner &#39;).hide(90);});});
     </script> -->
     <script type='text/javascript'>
-        const currentUrl = window.location.search;
+	const currentUrl = window.location.search;
 
         const host = window.location.host;
         const protocol = window.location.protocol;
-        var baseUrl = protocol + "//" + host;
+        const baseUrl = protocol + "//" + host;
 
-        var ambila = currentUrl.replace("?search=", "");
-        var ambils = ambila.replace("&c=1", "");
-        var ambil = decodeURI(ambils)
+        var ambil = currentUrl.replace("?search=", "");
         var ambil = ambil.replaceAll("+", " ");
-        var ambil = ambil.replace("search?q=", "");
-        var ambil = ambil.replace("?q=", "");
+		var ambil = ambil.replaceAll("%20", " ");
         var postTitle = ambil;
 
         document.title = postTitle;
@@ -117,9 +114,9 @@
 
                     </ul>
 
-                    <form class="form-inline my-2 my-lg-0" action='/search' id='search-box' method='GET'>
+                    <form class="form-inline my-2 my-lg-0" action='/?' id='search-box' method='GET'>
                         <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"
-                            name="q" autocomplete="off">
+                            name="search" autocomplete="off">
                         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
                     </form>
                 </div>
