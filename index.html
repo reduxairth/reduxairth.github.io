@@ -27,7 +27,7 @@
         const protocol = window.location.protocol;
         var baseUrl = protocol + "//" + host;
 
-        // var ambila = currentUrl.replace("?search=", "");
+        var ambila = currentUrl.replace("?search=", "");
         var ambils = ambila.replace("&c=1", "");
         var ambil = decodeURI(ambils)
         var ambil = ambil.replaceAll("+", " ");
