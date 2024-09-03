@@ -31,8 +31,8 @@
         var ambils = ambila.replace("&c=1", "");
         var ambil = decodeURI(ambils)
         var ambil = ambil.replaceAll("+", " ");
-        // var ambil = ambil.replace("?search=", "");
-        // var ambil = ambil.replace("?q=", "");
+        var ambil = ambil.replace("search?q=", "?search=");
+        var ambil = ambil.replace("?q=", "");
         var postTitle = ambil;
 
         document.title = postTitle;
